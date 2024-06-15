@@ -1,0 +1,8 @@
+.nav-menus li {
+  border-bottom: 3.5px solid #fff4f2;
+  transition: all .4s;
+}
+
+.nav-menus li:hover {
+  border-bottom: 3.5px solid #fe5f21;
+}
