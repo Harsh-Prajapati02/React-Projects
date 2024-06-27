@@ -1,0 +1,74 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+  /* violet */
+  --primary-color: 111, 76, 255;
+
+  /* white */
+  --text-color: 256, 256, 256;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #07050f;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+.glow{
+  height: 100%;
+  width: 100%;
+  --second-gradient-coords: 110% 67%;
+  --first-gradient-coords: -8% 32%;
+   background-image: radial-gradient(circle closest-corner at var(--first-gradient-coords),rgba(40,72,122,0.85),transparent), radial-gradient(circle closest-corner at var(--second-gradient-coords),rgba(138,41,129,0.7),transparent);
+}
+
+.text-glow {
+  text-shadow: 0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #30CFD0, #c43ad6);
+}
+
+.btn {
+  font-size: 18px;
+  padding: 12px 32px;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: rgba(var(--primary-color), 0.5) 0px 0px 20px 0px;
+}
+
+.btn-gradient {
+  background-image: linear-gradient(to right, rgb(1 134 218), rgb(182 49 167));
+  border: 0;
+  color: rgba(var(--text-color));
+}
+
+.btn-gradient-border {
+  color: rgb(var(--text-color));
+  border: 2px double transparent;
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)), radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
