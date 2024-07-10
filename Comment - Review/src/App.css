@@ -1,0 +1,55 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.student-info {
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0px white;
+}
+
+.student-info h2 {
+  font-size: 35px;
+  border-bottom: 2px solid white;
+}
+
+.student-info label {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.student-info input {
+  height: 35px;
+  outline: none;
+}
+
+.student-info select {
+  height: 35px;
+}
+
+.gender input {
+  height: 18px;
+  width: 18px;
+  outline: none;
+}
+
+.submit-btn {
+  border: 2px solid white;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  padding: 5px 50px;
+  border-radius: 5px;
+  transition: all 0.4s;
+}
+
+.submit-btn:hover {
+  border: 2px solid white;
+  background-color: black;
+  color: white;
+}
