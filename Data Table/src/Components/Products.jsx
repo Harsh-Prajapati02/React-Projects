@@ -6,9 +6,19 @@ const Products = () => {
 
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
+  const [type, setType] = useState(null);
+  const [order, setOrder] = useState(null);
 
   const getDataFromServer = () => {
-    axios.get(`http://localhost:3000/products?_page=${page}&_limit=10`).then((res) => setData(res.data))
+    axios.get(`http://localhost:3000/products`,{
+      params : {
+        _page : page,
+        _limit : 10,
+        type : type,
+        _sort : "price",
+        _order : order
+      } 
+    }).then((res) => setData(res.data))
     .catch((err) => console.log(err))
   }
 
@@ -23,7 +33,7 @@ const Products = () => {
 
   useEffect(() => {
     getDataFromServer()
-  }, [page])
+  }, [page, type, order])
 
   return (
     <>
@@ -35,11 +45,11 @@ const Products = () => {
         <div className="row">
           <div className='p-5 ps-4 pe-4 d-flex justify-content-between align-items-center'>
             <div className='sort ps-1'>
-              <button className='me-3 p-2 ps-5 pe-5 highToLow'>Price High To Low</button>
-              <button className='ms-3 p-2 ps-5 pe-5 lowToHigh'>Price Low To High</button>
+              <button onClick={() => setOrder("asc")} className='me-3 p-2 ps-5 pe-5 lowToHigh'>Price Low To High</button>
+              <button onClick={() => setOrder("desc")} className='ms-3 p-2 ps-5 pe-5 highToLow'>Price High To Low</button>
             </div>
             <div className='filter pe-1'>
-              <select className='p-2 ps-3 pe-3' name="Filter" id="">
+              <select onChange={(e) => setType(e.target.value)} className='p-2 ps-3 pe-3' name="Filter" id="">
                 <option className='mt-2' value="type">Type</option>
                 <option value="analog">Analog</option>
                 <option value="digital">Digital</option>
