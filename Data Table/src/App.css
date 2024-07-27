@@ -139,7 +139,18 @@
   border: none;
   font-size: 17px;
   outline: none;
+  padding: 11.7px;
   border: 2px solid #f0f0f0;
+}
+
+.search {
+  border: 2px solid #f0f0f0;
+}
+
+.search input {
+  outline: none;
+  border: none;
+  color: #222222;
 }
 
 .product {
