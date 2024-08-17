@@ -1,0 +1,400 @@
+.active {
+  color: #ff2020;
+}
+
+.navbar {
+  background-color: #fff;
+}
+
+.nav_link {
+  color: #141517;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+.nav_link:hover {
+  color: #ff2020;
+}
+
+/* Homepage */
+/* .right {
+  background-image: url(images/watch.webp);
+  height: 140vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.homepage h1 {
+  font-size: 90px;
+  color: #0b1c39;
+  font-weight: 800;
+}
+
+.homepage p {
+  font-size: 17px;
+}
+
+.left-content {
+  padding: 300px 100px 0px 0px;
+}
+
+.left button {
+  background: #4a4a4b;
+  font-family: "Josefin Sans", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 25px 28px;
+  border-radius: 0px;
+  display: inline-block;
+  line-height: 0;
+  cursor: pointer;
+  margin-bottom: 0;
+  margin: 10px;
+  cursor: pointer;
+  transition: background-color 0.4s linear;
+  border: 0;
+  margin: 0;
+}
+
+.left button:hover {
+  background-color: #ff2020;
+}
+
+.banner {
+  background-image: url(images/hero_banner.png);
+  height: 70vh;
+  background-repeat: no-repeat;
+}
+
+.banner h1 {
+  font-size: 70px;
+  font-weight: 700;
+  color: #0b1c39;
+}
+
+.login h3 {
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #0b1c39;
+}
+
+.login input {
+  border: none;
+  font-size: 17px;
+  outline: none;
+  border: 2px solid #f0f0f0;
+  transition: all 0.4s;
+}
+
+.login .login-btn {
+  border: 2px solid #f0f0f0;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+.login .login-btn:hover {
+  border: 2px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.logout-btn {
+  border: 2px solid #f0f0f0;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.4s;
+}
+
+.logout-btn:hover {
+  border: 2px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.products .lowToHigh {
+  border: 2px solid #f0f0f0;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+.products .lowToHigh:hover {
+  border: 2px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.products .highToLow {
+  border: 2px solid #f0f0f0;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+.products .highToLow:hover {
+  border: 2px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.products select {
+  border: none;
+  font-size: 17px;
+  outline: none;
+  padding: 11.7px;
+  border: 2px solid #f0f0f0;
+}
+
+.search {
+  border: 2px solid #f0f0f0;
+}
+
+.search input {
+  outline: none;
+  border: none;
+  color: #222222;
+}
+
+.product {
+  display: block;
+  height: 100%;
+}
+
+.product-img {
+  background-image: url(images/hero_banner.png);
+  border-radius: 5px;
+}
+
+.product h3 {
+  color: #444444;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.product p {
+  color: #444444;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.product .edit-btn {
+  border: 2px solid #f0f0f0;
+  font-weight: 600;
+  transition: all 0.4s;
+  padding: 5px 40px;
+}
+
+.product .delete-btn {
+  border: 2px solid #f0f0f0;
+  font-weight: 600;
+  padding: 5px 39px;
+  transition: all 0.4s;
+  color: #141517;
+}
+
+.product .delete-btn:hover {
+  border: 2px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.product .edit-btn:hover {
+  border: 2px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.product .edit-link {
+  text-decoration: none;
+  color: #141517;
+}
+
+.pagination-btn {
+  background: #f0f0f0;
+  font-family: "Josefin Sans", sans-serif;
+  color: #141517;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 22px 28px;
+  border-radius: 0px;
+  display: inline-block;
+  line-height: 0;
+  cursor: pointer;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: background-color 0.4s linear;
+  border: 0;
+}
+
+.pagination-page-count {
+  color: #141517;
+  font-size: 20px;
+  border: 2px solid #f0f0f0;
+  padding: 6px 30px;
+}
+
+.description .left .change {
+  color: #444444;
+  border: 2px solid #f0f0f0;
+  padding: 4px 20px 0px;
+  border-radius: 40px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.description .left .title {
+  color: #141517;
+  font-size: 38px;
+}
+
+.description .left .rating {
+  color: #444444;
+  font-weight: 400;
+}
+
+.description .left .rating-count {
+  font-size: 16px;
+  color: #4a4a4b;
+}
+
+.description .left p {
+  color: #444444;
+  font-size: 17px;
+  text-align: justify;
+}
+
+.description .middle {
+  background-image: url(images/hero_banner.png);
+}
+
+.description .right h5 {
+  color: #141517;
+  font-size: 20px;
+}
+
+.description .right p {
+  color: #4a4a4b;
+}
+
+.description .right h4 {
+  color: #141517;
+  font-size: 22px;
+}
+
+.description .right .price {
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.description .right span {
+  color: #4a4a4b;
+  font-size: 14px;
+}
+
+.description .right button {
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  border: 2px solid #4a4a4b;
+  padding: 10px 0;
+  transition: all 0.4s;
+  color: #fff;
+  background-color: #4a4a4b;
+}
+
+.description .right button:hover {
+  background-color: #fff;
+  color: #141517;
+}
+
+.footer p {
+  color: #868c98;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+.footer h4 {
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.footer li {
+  list-style-type: none;
+}
+
+.footer li a {
+  text-decoration: none;
+  color: #868c98;
+  font-weight: 00;
+  font-size: 18px;
+  transition: all .4s;
+}
+
+.footer li a:hover {
+  color: #ff2020;
+  padding-right: 7px;
+}
+
+.footer-botton .Copyright {
+  color: #888888;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 2;
+}
+
+.footer-botton .Copyright a {
+  color: #ff2020;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.footer-botton .icons a {
+  text-decoration: none;
+  color: #222222;
+  font-size: 14px;
+  transition: all .4s;
+}
+
+.footer-botton .icons a:hover {
+  color: #ff2020;
+}
+
+.add-watch input {
+  border: none;
+  font-size: 17px;
+  outline: none;
+  border: 2px solid #f0f0f0;
+  transition: all 0.4s;
+}
+
+.add-watch h3 {
+  font-size: 26px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #0b1c39;
+}
+
+.add-watch-btn {
+  border: 2px solid #f0f0f0;
+  font-weight: 600;
+  transition: all 0.4s;
+}
+
+.add-watch-btn:hover {
+  border: 2px solid #f0f0f0;
+  background-color: #fff;
+}
+
+.add-watch select {
+  border: none;
+  font-size: 17px;
+  outline: none;
+  border: 2px solid #f0f0f0;
+  transition: all 0.4s;
+}
+
+.add-watch option {
+  font-size: 17px;
+  outline: none;
+  border: 2px solid #f0f0f0;
+  transition: all 0.4s;
+}
