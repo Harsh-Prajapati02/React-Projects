@@ -16,7 +16,10 @@ const SignUp = () => {
             alert("Sign-Up Successfully...")
             console.log(res)
         })
-        .catch((err) => console.log(err))
+        .catch((err) => {
+            alert("Password should be at least 6 characters")
+            console.log(err)
+        })
     }
 
     return (

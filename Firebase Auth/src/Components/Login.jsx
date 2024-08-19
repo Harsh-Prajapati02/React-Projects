@@ -17,25 +17,15 @@ const Login = () => {
     })
     .catch((err) => {
       console.log(err)
+      alert("Incorrect Email OR Password")
     })
   }
-
-  // const handleLoginWithEmailAndPassword = () => {
-  //   signInWithEmailAndPassword(auth, email, password)
-  //   .then((res) => {
-  //     alert("Login Successfully...")
-  //     console.log(res)
-  //   })
-  //   .catch((err) => {
-  //     console.log(err)
-  //   })
-  // }
 
   const handleLogin = () => {
     signInWithPopup(auth, provider)
     .then((res) => {
       alert("Login Successfully...")
-      // console.log(res)
+      console.log(res)
     })
     .catch((err) => {
       console.log(err)
