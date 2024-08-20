@@ -8,6 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
+  // For Email and Password Login
   const handleSubmit = (e) => {
     e.preventDefault()
     signInWithEmailAndPassword(auth, email, password)
@@ -21,6 +22,7 @@ const Login = () => {
     })
   }
 
+  // For Google Login
   const handleLogin = () => {
     signInWithPopup(auth, provider)
     .then((res) => {
@@ -32,6 +34,7 @@ const Login = () => {
     })
   }
 
+  // For Logout
   const handleLogout = () => {
     signOut(auth)
     .then((res) => {
@@ -54,7 +57,6 @@ const Login = () => {
           <form onSubmit={(e) => handleSubmit(e)} className='login-form d-flex flex-column' action="">
             <input onChange={(e) => setEmail(e.target.value)} className='p-2 ps-3 mb-3' type="text" placeholder='Email' />
             <input onChange={(e) => setPassword(e.target.value)} className='p-2 ps-3 mb-3' type="text" placeholder='Password' />
-            {/* <input className='submit-btn p-3 pb-2' type="submit" /> */}
             <button className='login-btn p-3 pb-2 mb-3'>LOG IN</button>
           </form>
           <button onClick={handleLogout} className='logout-btn p-3 pb-2 mb-3'>LOG OUT</button>
