@@ -7,10 +7,10 @@ import { db } from '../Services/firebase';
 const Products = () => {
 
   const [data, setData] = useState([]);
-  // const [page, setPage] = useState(1);
-  // const [type, setType] = useState(null);
-  // const [order, setOrder] = useState(null);
-  // const [search, setSearch] = useState(null);
+  const [page, setPage] = useState(1);
+  const [type, setType] = useState(null);
+  const [order, setOrder] = useState(null);
+  const [search, setSearch] = useState(null);
 
   const getDataFromFirebase = () => {
     getDocs(collection(db, "products"))
@@ -34,7 +34,7 @@ const Products = () => {
 
   useEffect(() => {
     getDataFromFirebase()
-  }, [])
+  }, [page, type, order, search])
 
   return (
     <>
