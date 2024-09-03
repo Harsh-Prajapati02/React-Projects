@@ -1,6 +1,7 @@
-import axios from 'axios';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import { db } from '../Services/firebase';
 
 const EditWatchData = () => {
 
@@ -22,12 +23,13 @@ const EditWatchData = () => {
 
     const [watchData, setwatchData] = useState(initialState)
 
-    const getSingleData = () => {
-        axios.get(`http://localhost:3000/products/${id}`)
-            .then((res) => {
-                setwatchData(res.data)
-            })
-            .catch((err) => console.log(err))
+    const getSingleData = async (id) => {
+        try {
+            const res = await getDoc(doc(db, "products", id))
+            setwatchData(res.data())
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     const { change, image, title, price, rate, count, type, color, bandMaterial, description, code } = watchData;
@@ -36,17 +38,18 @@ const EditWatchData = () => {
         setwatchData({ ...watchData, [e.target.name]: e.target.value });
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        axios.put(`http://localhost:3000/products/${id}`, watchData)
-        .then((res) => {
+        try {
+            const res = await updateDoc(doc(db, "products", id), watchData)
             alert("Data Updated Successfully...")
-        })
-        .catch((err) => console.log(err))
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     useEffect(() => {
-        getSingleData();
+        getSingleData(id);
     }, [])
 
     return (

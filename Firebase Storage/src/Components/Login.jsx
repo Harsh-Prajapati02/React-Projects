@@ -14,7 +14,6 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
     .then((res) => {
       alert("Login Successfully...")
-      console.log(res)
     })
     .catch((err) => {
       console.log(err)

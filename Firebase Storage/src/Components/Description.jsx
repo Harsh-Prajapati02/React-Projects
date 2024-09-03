@@ -1,21 +1,25 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { FaTruck } from "react-icons/fa6";
 import { useParams } from 'react-router-dom';
+import { doc, getDoc } from 'firebase/firestore';
+import { db } from '../Services/firebase';
 
 const Description = () => {
 
     const [singleCardData, setsingleCardData] = useState({})
     
-    const param = useParams()
-    const getSingleCard = () => {
-        axios.get(`http://localhost:3000/products/${param.id}`)
-            .then((res) => setsingleCardData(res.data))
-            .catch((err) => console.log(err))
+    const {id} = useParams()
+    const getSingleCard = async (id) => {
+        try {
+            const res = await getDoc(doc(db, "products", id))
+            setsingleCardData(res.data())
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     useEffect(() => {
-        getSingleCard()
+        getSingleCard(id)
     }, [])
 
     const {change, image, title, price, rate, count, type, color, bandMaterial, description, code} = singleCardData
