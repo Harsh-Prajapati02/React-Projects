@@ -9,7 +9,7 @@ const CounterButtons = () => {
 
     return (
         <>
-            <div className='counter-btns'>
+            <div className='counter-btns mt-2'>
                 <button className='me-4'
                 disabled={counter == 0}
                  onClick={ () => dispatch(decrementCount()) }>REDUCE</button>
