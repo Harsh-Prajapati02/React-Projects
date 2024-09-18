@@ -1,0 +1,100 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.nav-link {
+  color: black;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* DASHBOARD */
+.dashboard h1 {
+  font-size: 38px;
+  font-weight: 600;
+}
+
+.dashboard button {
+  border: 2px solid lightgray;
+  padding: 7px 50px;
+  font-weight: 600;
+  transition: all .4s;
+}
+
+.dashboard button:hover {
+  background-color: #fff;
+}
+
+.dashboard p {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* LOGIN */
+.login-form {
+  box-shadow: 0 0 10px 0px lightgray;
+}
+
+.login-form label {
+  font-weight: 600;
+}
+
+.login-form input {
+  height: 40px;
+  outline: none;
+  border: 2px solid lightgray;
+  transition: all 0.4s;
+}
+
+.login-form input:hover {
+  border: 2px solid rgb(145, 144, 144);
+}
+
+.login-form .submit-btn {
+  border: 2px solid lightgray;
+  padding: 8px 40px;
+  font-weight: 600;
+  transition: all .4s;
+}
+
+.login-form .submit-btn:hover {
+  background-color: #fff;
+}
+
+.login-form .back-btn {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-form .back-btn:hover {
+  text-decoration: underline;
+}
+
+/* DESCRIPTION */
+.description-page {
+  text-align: left;
+  box-shadow: 0 0 10px 0 lightgray;
+}
+
+.description-page .brand h2 {
+  font-weight: 600;
+}
+
+.description-page .category {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.description-page .details {
+  font-size: 18px;
+}
+
+.description-page .price {
+  font-size: 22px;
+  font-weight: 600;
+}
